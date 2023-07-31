@@ -3,8 +3,8 @@
   "private": true,
   "version": "1.11.1",
   "description": "💊 Valtio makes proxy-state simple for React and Vanilla",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
   "typesVersions": {
     "<4.5": {
       "esm/*": [
@@ -13,27 +13,6 @@
       "*": [
         "ts3.4/*"
       ]
-    }
-  },
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./index.d.ts",
-      "import": {
-        "types": "./esm/index.d.mts",
-        "default": "./esm/index.mjs"
-      },
-      "module": "./esm/index.js",
-      "default": "./index.js"
-    },
-    "./*": {
-      "types": "./*.d.ts",
-      "import": {
-        "types": "./esm/*.d.mts",
-        "default": "./esm/*.mjs"
-      },
-      "module": "./esm/*.js",
-      "default": "./*.js"
     }
   },
   "files": [
@@ -98,7 +77,7 @@
   },
   "homepage": "https://github.com/pmndrs/valtio",
   "dependencies": {
-    "proxy-compare": "2.5.1",
+    "proxy-compare": "workspace:*",
     "use-sync-external-store": "1.2.0"
   },
   "devDependencies": {
